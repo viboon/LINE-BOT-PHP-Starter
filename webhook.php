@@ -36,7 +36,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
-curl_setopt($ch, CURLOPT_PROXY, '10.4.3.240:80');
+//curl_setopt($ch, CURLOPT_PROXY, '10.4.3.240:80');
 curl_setopt($ch, CURLOPT_HEADER, false);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_HTTPHEADER, $arrHeader);
