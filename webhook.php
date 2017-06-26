@@ -1,6 +1,6 @@
 <?php
  
-$strAccessToken = "ACCESS_TOKEN";
+$strAccessToken = "2XCwXr7qeLYAdrzSi+T2MvlLvAHD6i7a2DBz5oW2fl0tjr8DKUsXBCPn/7pt0aRv5/k53Jx8fA76AsV7jIE2fXYdhSKdFCVPceRs7Sx2VRqhUZ710hHIiAY5Ew4LGg+3SSpqDoEA15fIGQOYffWoNQdB04t89/1O/w1cDnyilFU=";
  
 $content = file_get_contents('php://input');
 $arrJson = json_decode($content, true);
@@ -11,7 +11,7 @@ $arrHeader = array();
 $arrHeader[] = "Content-Type: application/json";
 $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
  
-if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
+if($arrJson['events'][0]['message']['text'] == "้hi"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
