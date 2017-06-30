@@ -16,7 +16,7 @@ if($arrJson['events'][0]['message']['text'] == "hi"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-  sendUserID($arrJson['events'][0]['source']['userId']);
+  sendUserID("User Name: ".$arrJson['events'][0]['source']['displayName']."\n User ID: ".$arrJson['events'][0]['source']['userId']);
 }else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -57,7 +57,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData = array();
 $arrPostData['to'] = "Ub8713cd9b2b9506f5842b204b239bbde";
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = "New User: ".$message;
+$arrPostData['messages'][0]['text'] = $message;
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
