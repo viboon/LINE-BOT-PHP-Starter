@@ -57,7 +57,7 @@ $arrHeader[] = "Authorization: Bearer {$strAccessToken}";
 $arrPostData = array();
 $arrPostData['to'] = "Ub8713cd9b2b9506f5842b204b239bbde";
 $arrPostData['messages'][0]['type'] = "text";
-$arrPostData['messages'][0]['text'] = $message;
+$arrPostData['messages'][0]['text'] = "New User: ".$message;
  
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL,$strUrl);
